@@ -1,0 +1,257 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "This is my API - by - Irio czaikowski junior",
+        "description": "This api is used to integrate front to the bakckend",
+        "version": "1.0.0"
+    },
+    "host": "phonebook-send4.local",
+    "basePath": "/api",
+    "paths": {
+        "/contacts": {
+            "get": {
+                "summary": "Find all contacts saved",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "500": {
+                        "description": "Application error"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Save the contact on the Database",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Contact name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "lastname",
+                        "in": "query",
+                        "description": "Contact last name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Contact email: like teste@test.com",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone_number",
+                        "in": "query",
+                        "description": "Contact phone number: like (41) 99999-9999",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/contacts/{id}": {
+            "get": {
+                "summary": "Find an specific contact by id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Contact Identificator",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update the contact and save on the Database",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Contact Identificator",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Contact name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "lastname",
+                        "in": "query",
+                        "description": "Contact last name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Contact email: like teste@test.com",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone_number",
+                        "in": "query",
+                        "description": "Contact phone number: like (41) 99999-9999",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Remove contact from the Database",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Contact Identificator",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/messages/contact/{contact_id}": {
+            "get": {
+                "summary": "Find all messages by contact",
+                "parameters": [
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Contact Identificator",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/messages/{id}": {
+            "get": {
+                "summary": "Find an specific messsage by id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Message Identificator",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update message",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Message Identificator",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "description": "Contact name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "contact_id",
+                        "in": "query",
+                        "description": "Contact identificator",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Remove message from the Database",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Contact Identificator",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/messages": {
+            "post": {
+                "summary": "Save the message on the Database",
+                "parameters": [
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "description": "Message description",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "contact_id",
+                        "in": "query",
+                        "description": "Contact identificator",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}

@@ -1,0 +1,48 @@
+Escopo projeto
+
+Desenvolver um RESTful api / Crud de uma agenda com Laravel.
+
++ Permitir cadastrar contato (nome, sobrenome, e-mail e telefone). 
++ Permitir cadastrar mensagem (contato (fk), descrição). 
++ Listar todas as mensagens por contato. 
++ Listar todos os contatos. 
++ Permitir alterar e excluir uma mensagem. 
++ Permitir alterar os dados de um contato.
++ Permitir excluir um contato. 
++ Validar os payloads enviados.  
++ Criar um repositório no GitHub. 
+
+Pipeline
+
+Backend
+
+- Create new laravel projet - ok
+- Create local domain to this project - ok
+- Configure Homestead to provision virtual machine - ok
+- Model the database considerig the software scope. - ok
+	- Make the migration to create the tables by script - ok
+- Create API routes - ok
+	- Instalar dependencia para CORS (Cross origin resource sharing) -ok
+	- routes for contacts - ok
+	- routes for messages - NNNNOK
+- Create the models - ok
+	- implemement ContactModel - ok
+	- implement MessageModel - NNNNOK	
+- Create the controllers - ok
+	- implemement ContactController - ok
+	- implement MessageController - NNNNOK	
+- Create the documentation of api - ok
+	- implemement ContactModel - ok
+	- implement MessageModel - NNNNOK
+- README.md
+	specify http://phonebook-send4.local/api/documentation on README.md - NNNNOK
+	- Exports the diagram and refere this on README.md - NNNNOK
+
+Front End
+
+- Create new react project  - ok
+- Create actions to contacts  - ok
+- Create Reducers to contacts  - ok
+- Create pages to contacts  - ok
+- Create Routes to contacts  - ok
+- Específicar API Cliente/Server ok
