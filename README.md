@@ -1,6 +1,5 @@
-# Desafio Send4 - Irio czaikowski junior
+# React Phonebook - Irio czaikowski junior
 
-Teste qualificatório para send4
 Aplicação composta por duas partes:
 Api => Api em laravel disponível na pasta phonebook-send4 da raiz do repositório.
 Aplicação => Aplicação desenvolvida em react com redux disponível na pasta phonebook-front da raiz do repositório. 
@@ -19,7 +18,7 @@ Aplicação => Aplicação desenvolvida em react com redux disponível na pasta 
 3. Acesse a máquina via ssh com comando 'vagrant ssh'
 4. Execute o comando 'composer update'
 5. Execute o comando 'php artisan migrate' para criar as tabelas de baco de dados
-6. Crie um domínio local para 'phonebook-send4.local' (Obrigatório para essa aplicação)
+6. Crie um domínio local para 'phonebook-react.local' (Obrigatório para essa aplicação)
 
 ## Frontend - Tecnologia utilizadas:
 - React SSR (Server side rendering)
@@ -35,7 +34,7 @@ Aplicação => Aplicação desenvolvida em react com redux disponível na pasta 
 3. A aplcação será executada na porta 3000
 
 ## Observações Gerais:
-1. O caminho para o diagrama EER é: './phonebook-send4/database/diagrams/phonebook-send4-eer.png'
-2. A documnetação da API está disponível em: phonebook-send4.local/api/documentation
+1. O caminho para o diagrama EER é: './react-phonebook/database/diagrams/phonebook-send4-eer.png'
+2. A documnetação da API está disponível em: api.phonebook.local/api/documentation
 
-Obrigado pela oportunidade.
+Obrigado !!!
